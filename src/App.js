@@ -1,24 +1,20 @@
-import logo from './logo.svg';
 import './App.css';
+import Profile from './Profile/Profile';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import image from './img.jpg';
 
 function App() {
+  const Box=(name)=>{alert(`the name is ${name}`);}
+  var Profilelist=[{Fullname:"Tammem Ayadi",bio:"responsable magasin",profession:'nothing yet'}]
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    
+      <Profile profilelist={Profilelist} handleName ={Box} >
+
+       {image} 
+        
+      </Profile>
+    
   );
 }
 
